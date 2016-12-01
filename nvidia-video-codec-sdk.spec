@@ -1,7 +1,7 @@
 %global src_name Video_Codec_SDK
 
 Name:           nvidia-video-codec-sdk
-Version:        7.0.1
+Version:        7.1.9
 Release:        1%{?dist}
 Summary:        Hardware accelerated video encode and decode
 
@@ -50,6 +50,9 @@ install -m 644 -p -D Samples/common/inc/nvEncodeAPI.h \
 
 
 %changelog
+* Thu Dec 01 2016 leigh scott <leigh123linux@googlemail.com> - 7.1.9-1
+- update to 7.1.9
+
 * Wed Aug 03 2016 Leigh Scott <leigh123linux@googlemail.com> - 7.0.1-1
 - first build
 
