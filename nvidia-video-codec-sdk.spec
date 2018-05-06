@@ -1,8 +1,8 @@
 %global src_name Video_Codec_SDK
 
 Name:           nvidia-video-codec-sdk
-Version:        8.0.14
-Release:        3%{?dist}
+Version:        8.1.24
+Release:        1%{?dist}
 Summary:        Hardware accelerated video encode and decode
 
 License:        Redistributable, no modification permitted
@@ -17,7 +17,7 @@ The Video Codec SDK includes a complete set of high-performance tools,
 samples and documentation for hardware accelerated video encode and decode. 
 
 %package -n nvenc-devel
-Summary:        Header for nvEncode API
+Summary:        Legacy header for nvEncode API
 License:        MIT/X11 (BSD like)
 
 %description -n nvenc-devel
@@ -40,7 +40,7 @@ rm doc/NVDEC_*
 # Nothing to do
 
 %install
-install -m 644 -p -D Samples/common/inc/nvEncodeAPI.h \
+install -m 644 -p -D LegacySamples/common/inc/nvEncodeAPI.h \
     %{buildroot}%{_includedir}/nvenc/nvEncodeAPI.h
 
 %files -n nvenc-devel
@@ -50,6 +50,9 @@ install -m 644 -p -D Samples/common/inc/nvEncodeAPI.h \
 
 
 %changelog
+* Sun May 06 2018 Leigh Scott <leigh123linux@googlemail.com> - 8.1.24-1
+- Update to Legacy 8.1.24, Use nv-codec-headers instead
+
 * Thu Mar 01 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 8.0.14-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
