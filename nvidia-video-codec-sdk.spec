@@ -40,11 +40,11 @@ rm doc/NVDEC_*
 # Nothing to do
 
 %install
-install -m 644 -p -D LegacySamples/common/inc/nvEncodeAPI.h \
+install -m 644 -p -D Samples/NvCodec/NvEncoder/nvEncodeAPI.h \
     %{buildroot}%{_includedir}/nvenc/nvEncodeAPI.h
 
 %files -n nvenc-devel
-%doc doc/*.pdf
+%doc doc/*.pdf deprecation_notices.txt ReadMe.txt Release_notes.txt
 %license LicenseAgreement.pdf
 %{_includedir}/nvenc/
 
