@@ -1,8 +1,8 @@
 %global src_name Video_Codec_SDK
 
 Name:           nvidia-video-codec-sdk
-Version:        8.1.24
-Release:        2%{?dist}
+Version:        8.2.16
+Release:        1%{?dist}
 Summary:        Hardware accelerated video encode and decode
 
 License:        Redistributable, no modification permitted
@@ -50,6 +50,9 @@ install -m 644 -p -D LegacySamples/common/inc/nvEncodeAPI.h \
 
 
 %changelog
+* Wed Sep 05 2018 Leigh Scott <leigh123linux@googlemail.com> - 8.2.16-1
+- Update to 8.2.16
+
 * Fri Jul 27 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 8.1.24-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
